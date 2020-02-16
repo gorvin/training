@@ -10,6 +10,7 @@ RUN apt-get -yq update \
         git \
         gcc \
         libc-dev \
+        patchelf \
     && apt-get clean \
     && rm -rf /tmp/* /var/tmp/* /var/lib/apt/archive/* /var/lib/apt/lists/*
 
