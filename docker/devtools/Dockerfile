@@ -35,11 +35,9 @@ RUN apt-get update -qqy \
         curl \
         ca-certificates \
         git \
-        openjdk-8-jre-headless \
+        patchelf \
         unzip \
         wget \
-    && sed -e 's/securerandom\.source=file:\/dev\/random/securerandom\.source=file:\/dev\/urandom/' \
-        -i /usr/lib/jvm/java-8-openjdk-amd64/jre/lib/security/java.security \
     && rm -rf /var/lib/{apt,dpkg,cache,log}/ \
         /tmp/* \
         /var/tmp/*
