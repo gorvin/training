@@ -1,5 +1,5 @@
 FROM ubuntu:bionic
-LABEL maintainer "Igor Vincic <gorvin@github.com>"
+LABEL maintainer "Igor Vincic <gorvin@users.noreply.github.com>"
 
 ARG FOO_VERSION=1
 
