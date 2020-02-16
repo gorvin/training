@@ -2,5 +2,5 @@
 
 void foo(void)
 {
-    puts("Hello, I am a shared library version 1");
+    puts("Hello, I am a shared library version 2");
 }
