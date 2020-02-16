@@ -23,9 +23,14 @@ RUN apt-get update -qqy \
         tzdata \
     && echo "${TZ}" > /etc/timezone \
     && dpkg-reconfigure --frontend noninteractive tzdata \
+    && rm -rf /var/lib/{apt,dpkg,cache,log}/ \
+        /tmp/* \
+        /var/tmp/*
+
+RUN apt-get update -qqy \
     && apt-get install -qqy --no-install-recommends \
         binutils \
-        build-essentials \
+        build-essential \
         bzip2 \
         curl \
         ca-certificates \
