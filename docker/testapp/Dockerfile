@@ -1,6 +1,9 @@
 FROM ubuntu:bionic
+LABEL maintainer "Igor Vincic <gorvin@github.com>"
 
 ARG FOO_VERSION=1
 
-COPY libfoo.so libfoo.so.${FOO_VERSION} /usr/lib/
 COPY testapp.bin /usr/bin
+COPY libfoo.so libfoo.so.${FOO_VERSION} /usr/lib/
+
+RUN ln -sf libfoo.so.${FOO_VERSION} /usr/lib/libfoo.so
